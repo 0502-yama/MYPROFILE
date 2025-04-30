@@ -7,6 +7,11 @@ body{
   margin: 0;
 }
 
+header{
+  display:flex;
+  justify-content:space-between;
+}
+
 h1{
   font-weight: bold;
   text-align: center;
@@ -21,7 +26,9 @@ nav ul{
 
 article img {
   display:block;
-  background-size: cover;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
 }
 article p {
   text-align: center;
@@ -31,22 +38,22 @@ article h2 {
   text-align: center;
 }
 
-.box1 h2 {
+section h2 {
   font-size: 32px;
   text-align: center;
   padding-top: 100px;
 }
-.box1 img{
+
+section img { 
+  display: flex;
+  justify-content: center;
   border-radius: 50%;
-  display: inline;
-  margin: 0 550px 0 550px;
+  margin: 0 auto;
   height: 300px;
   width: 300px;
 }
 
-.box1 p{
-  font-size: 24px;
-  font-weight: 700;
+section p {
   text-align: center;
 }
 
@@ -85,4 +92,24 @@ footer img {
   flex-direction: column;
   width: 50px;
   height: 50px;
+}
+
+/*スマホ版*/
+@media (max-width: 375px){
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+
+  .PC-img {
+    object-fit: cover;
+    object-position:left;
+  }
 }
