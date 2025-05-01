@@ -3,8 +3,8 @@ html{
  font-size: 100%;
 }
 body{
-  padding: 0;
-  margin: 0;
+  padding: 0 ;
+  margin: 0 ;
 }
 
 header{
@@ -54,13 +54,15 @@ section img {
 }
 
 section p {
+  font-weight: bold;
   text-align: center;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  padding:30px 100px;
+  flex: auto;
+  justify-items: center;
+  padding: 0 50px;
+  margin: 0 auto;
   background-color: rgb(241, 231, 189);
 }
 
@@ -68,15 +70,21 @@ section p {
   border-radius: 20%;
   width: 250px;
   height: 200px;
-  padding:0 30px;
+  padding:0px;
 }
 
 .container h2{
-  padding: 0 30px;
+  padding: 0 ;
+  width: 250px;
 }
 
 .container p{
-  padding: 0 30px;
+  padding: 0 ;
+  width: 250px;
+}
+
+.item-1,.item-2,.item-3,.item-4{
+  padding: 0 30px ;
 }
 
 footer {
@@ -94,22 +102,35 @@ footer img {
   height: 50px;
 }
 
-/*スマホ版*/
-@media (max-width: 375px){
+footer p{
+  padding: 0;
+  margin: 0;
+}
+
+.item-4 p{
+  margin: 16px 0 0 0;
+}
+
+/*タブレット版*/
+@media(min-width: 600px){
+ body {
+  min-width: 600px;
+ }
+ .container{
+  display: frex;
+ }
+
+/*PC版*/
+@media (min-width: 800px){
   body {
+    min-width: 800px;
     padding: 0;
     margin: 0;
   }
 
   .container{
     display: flex;
-    flex-direction: column;
-    padding: 30px 20px;
+    justify-content: center;
   }
-
-
-  .PC-img {
-    object-fit: cover;
-    object-position:left;
-  }
+}
 }
